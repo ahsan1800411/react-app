@@ -15,11 +15,22 @@ export default class ClassCounter extends Component {
     });
   };
 
+  incrementFive = () => {
+    for (let i = 0; i < 5; i++) {
+      this.setState((prevState) => {
+        return {
+          count: prevState.count + 1,
+        };
+      });
+    }
+  };
+
   render() {
     return (
       <div>
         <h1>{this.state.count}</h1>
         <button onClick={this.increaseCount}>Increment</button>
+        <button onClick={this.incrementFive}>Increment 5</button>
       </div>
     );
   }
