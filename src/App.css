@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.text-class {
+  color: yellow;
+}
+
+.programming {
+  color: blue;
+  font-size: 35px;
+}

@@ -5,35 +5,32 @@ export default class ClassComponent extends Component {
     super(props);
 
     this.state = {
-      count: 0,
-      name: '',
+      x: 0,
+      y: 0,
     };
   }
 
+  logMousePosition = (e) => {
+    this.setState({
+      x: e.clientX,
+      y: e.clientY,
+    });
+  };
+
   componentDidMount() {
-    console.log('Mounting');
-    document.title = `You clicked ${this.state.count} times`;
+    window.addEventListener('mousemove', this.logMousePosition);
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.count !== this.state.count) {
-      console.log('Updating');
-      document.title = `You clicked ${this.state.count} times`;
-    }
+  componentWillUnmount() {
+    window.removeEventListener('mousemove', this.logMousePosition);
   }
 
   render() {
     return (
       <div>
-        <h1>{this.state.count}</h1>
-        <input
-          type='text'
-          value={this.state.name}
-          onChange={(e) => this.setState({ name: e.target.value })}
-        />
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
-          click me
-        </button>
+        <h1>
+          X: {this.state.x} | Y: {this.state.y}
+        </h1>
       </div>
     );
   }

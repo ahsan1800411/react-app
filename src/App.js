@@ -1,15 +1,19 @@
 import React from 'react';
 import './App.css';
-import FetchUsers from './components/FetchUsers';
+import Styling from './components/Styling';
+// import HookComponent from './components/HookComponent';
+// import ToggleDisplay from './components/ToggleDisplay';
 // import ClassComponent from './components/ClassComponent';
-// import EffectHook from './components/EffectHook';
+// import Rendering from './components/Rendering';
 
 function App() {
   return (
     <>
       {/* <ClassComponent /> */}
-      {/* <EffectHook /> */}
-      <FetchUsers />
+      {/* <HookComponent /> */}
+      {/* <ToggleDisplay /> */}
+      {/* <Rendering /> */}
+      <Styling />
     </>
   );
 }
