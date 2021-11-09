@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css';
-import List from './components/List';
-// import Props from './components/Props';
-// import DefaultProps from './components/DefaultProps';
+import Children from './components/Children';
 
 function App() {
   return (
     <>
-      {/* <DefaultProps age={22} /> */}
-      {/* <Props name={55} age={21} /> */}
-      <List />
+      <Children name='Ahsan'>
+        <h1>Hello World</h1>
+        <p>Hii</p>
+      </Children>
     </>
   );
 }
