@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import Children from './components/Children';
+// import CounterOne from './components/CounterOne';
+import CounterTwo from './components/CounterTwo';
 
 function App() {
   return (
     <>
-      <Children name='Ahsan'>
-        <h1>Hello World</h1>
-        <p>Hii</p>
-      </Children>
+      <CounterTwo />
     </>
   );
 }
