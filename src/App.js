@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
-import ParentComponent from './components/ParentComponent';
+// import Counter from './components/Counter';
+// import Input from './components/Input';
+import Timer from './components/Timer';
 
 function App() {
   return (
     <>
-      <ParentComponent />
+      {/* <Counter /> */}
+      {/* <Input /> */}
+      <Timer />
     </>
   );
 }
